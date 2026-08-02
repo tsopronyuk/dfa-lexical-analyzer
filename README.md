@@ -14,11 +14,11 @@ You can run the source code, review the step-by-step text analysis, and view the
   A lexical analyzer for fixed and variable-length tokens (keywords `go`, `goon`, `open`, `online`, numbers, and skipping unexpected/noise characters).  
   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tsopronyuk/dfa-lexical-analyzer/blob/main/notebooks/01_keywords_dfa.ipynb)
 
-* **Numeric Constants and Identifiers**  
+* **Example 2: Numeric Constants and Identifiers**  
   An advanced lexer with explicit backtracking support. It recognizes binary, octal, decimal, and hexadecimal constants, as well as identifiers, utilizing an optimized and compact DFA state visualization.  
   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tsopronyuk/dfa-lexical-analyzer/blob/main/notebooks/02_numbers_dfa.ipynb)
 
-* **Example 3: Universal Table-Driven DFA Engine**  
+* **Universal Table-Driven DFA Engine**  
   A 100% generic, matrix-driven DFA engine (`UniversalDFA`). It decouples state transition matrices from the driver logic, supports lookahead/backtracking, and automatically renders compact Graphviz state diagrams.  
   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tsopronyuk/dfa-lexical-analyzer/blob/main/notebooks/03_table_driven_dfa_lexer.ipynb)
 
