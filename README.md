@@ -1,5 +1,7 @@
 # DFA Lexical Analyzer and Visualizer 🔍
 
+[![Python Tests](https://github.com/tsopronyuk/dfa-lexical-analyzer/actions/workflows/python-tests.yml/badge.svg)](https://github.com/YOUR_USERNAME/dfa-lexical-analyzer/actions)
+
 This repository contains implementations of lexical analyzers based on explicit Deterministic Finite Automata (DFA). The main goal of this project is to demonstrate transparent, step-by-step tokenization with the automatic generation of compact state transition graphs.
 
 ## 🚀 Interactive Examples (Google Colab)
