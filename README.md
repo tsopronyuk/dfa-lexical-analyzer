@@ -35,3 +35,15 @@ To run the unit test suite locally using Python's built-in `unittest` module:
 
 ```bash
 python -m unittest discover -s tests
+
+```
+
+---
+
+## 🛠 Technologies
+
+* Python 3
+* Graphviz
+* IPython / Jupyter Notebook
+* GitHub Actions (CI/CD)
+
