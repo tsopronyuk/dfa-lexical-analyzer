@@ -1,0 +1,28 @@
+name: C++ Tests
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y graphviz
+
+    - name: Compile C++ Engine & Tests
+      run: |
+        g++ -std=c++17 tests/test_dfa.cpp -o run_tests
+
+    - name: Run C++ Unit Tests
+      run: |
+        ./run_tests
