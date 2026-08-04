@@ -1,0 +1,56 @@
+digraph DFA_Numbers_ID_Compact {
+	rankdir=LR ratio=compress size="10,4"
+	node [fontname=Helvetica fontsize=9 height=0.25 margin=0.02 width=0.25]
+	edge [fontname=Helvetica fontsize=8]
+	start_node [shape=point width=0]
+	start_node -> 0
+	0 [fillcolor="#f8f9fa" shape=circle style=filled]
+	1 [fillcolor="#f8f9fa" shape=circle style=filled]
+	2 [fillcolor="#f8f9fa" shape=circle style=filled]
+	3 [fillcolor="#f8f9fa" shape=circle style=filled]
+	4 [fillcolor="#f8f9fa" shape=circle style=filled]
+	5 [fillcolor="#f8f9fa" shape=circle style=filled]
+	6 [fillcolor="#f8f9fa" shape=circle style=filled]
+	7 [fillcolor="#f8f9fa" shape=circle style=filled]
+	8 [fillcolor="#f8f9fa" shape=circle style=filled]
+	9 [fillcolor="#f8f9fa" shape=circle style=filled]
+	-1 [label="-1
+Ident
+[a-z_]" fillcolor="#d4e6f1" fontsize=8 shape=doublecircle style=filled]
+	-2 [label="-2
+Bin
+Const" fillcolor="#d5f5e3" fontsize=8 shape=doublecircle style=filled]
+	-3 [label="-3
+Dec
+Const" fillcolor="#fcf3cf" fontsize=8 shape=doublecircle style=filled]
+	-4 [label="-4
+Oct
+Const" fillcolor="#ebdef0" fontsize=8 shape=doublecircle style=filled]
+	-5 [label="-5
+Hex
+Const" fillcolor="#fdebd0" fontsize=8 shape=doublecircle style=filled]
+	0 -> 1 [label=" 0 " color="#111111" style=solid]
+	0 -> 2 [label=" 1, 2-7, 8-9 " color="#111111" style=solid]
+	0 -> 3 [label=" b/B, x/X, o/O, a-f, g-z/_ " color="#111111" style=solid]
+	1 -> 2 [label=" 0, 1, 2-7, 8-9 " color="#111111" style=solid]
+	1 -> 4 [label=" b/B " color="#111111" style=solid]
+	1 -> 5 [label=" x/X " color="#111111" style=solid]
+	1 -> 6 [label=" o/O " color="#111111" style=solid]
+	1 -> -3 [label=" a-f, g-z/_, other " color="#777777" style=dashed]
+	2 -> 2 [label=" 0, 1, 2-7, 8-9 " color="#111111" style=solid]
+	2 -> -3 [label=" else " color="#777777" style=dashed]
+	3 -> 3 [label=" else " color="#111111" style=solid]
+	3 -> -1 [label=" other " color="#777777" style=dashed]
+	4 -> 7 [label=" 0, 1 " color="#111111" style=solid]
+	4 -> -3 [label=" else " color="#777777" style=dashed]
+	5 -> 8 [label=" else " color="#111111" style=solid]
+	5 -> -3 [label=" x/X, o/O, g-z/_, other " color="#777777" style=dashed]
+	6 -> 9 [label=" 0, 1, 2-7 " color="#111111" style=solid]
+	6 -> -3 [label=" else " color="#777777" style=dashed]
+	7 -> 7 [label=" 0, 1 " color="#111111" style=solid]
+	7 -> -2 [label=" else " color="#777777" style=dashed]
+	8 -> 8 [label=" else " color="#111111" style=solid]
+	8 -> -5 [label=" x/X, o/O, g-z/_, other " color="#777777" style=dashed]
+	9 -> 9 [label=" 0, 1, 2-7 " color="#111111" style=solid]
+	9 -> -4 [label=" else " color="#777777" style=dashed]
+}
